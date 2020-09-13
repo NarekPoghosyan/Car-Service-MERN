@@ -1,0 +1,56 @@
+$margin_top: 10px;
+$boxShadowColor: 0 0 10px rgb(0, 68, 255);
+
+.add_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  input {
+    height: 40px;
+    width: 600px;
+    border: 1px solid lightgray;
+    margin-top: $margin_top;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+
+  input:focus {
+    transition: 0.3s linear;
+    -webkit-box-shadow: $boxShadowColor;
+    box-shadow: $boxShadowColor;
+  }
+
+  .button {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+
+    &_back {
+      background-color: rgb(172, 0, 0);
+    }
+
+    &_complete {
+      background-color: rgb(2, 173, 8);
+    }
+
+    & button {
+      margin-top: $margin_top;
+      outline: none;
+      cursor: pointer;
+      color: white;
+      border: none;
+      width: 90px;
+      height: 30px;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@mixin widHei($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+%textFont {
+  text-align: center;
+  font-family: cursive;
+}
+
+.cars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &_cards {
+    background-color: rgb(218, 218, 218);
+    margin: 20px 5px 0px;
+    border: 1px solid lightgray;
+    overflow: hidden;
+    cursor: pointer;
+    @include widHei(200px, 300px);
+  }
+
+  &_cards:hover {
+    background-color: rgb(180, 180, 180);
+
+    .cars_delete {
+      background-color: rgb(180, 180, 180);
+    }
+  }
+
+  &_title_delete {
+    display: flex;
+  }
+
+  &_title {
+    width: 200px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &_delete {
+    margin: 1px 1px 0 0;
+    background-color:  rgb(218, 218, 218);
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-image: url(../../../Icons/garbageCar.png);
+    outline: none;
+  }
+
+  &_img {
+    margin: 0 10px 0 10px;
+    @include widHei(180px, 150px);
+  }
+
+  &_year {
+    @extend %textFont;
+  }
+
+  &_price {
+    @extend %textFont;
+    color: rgb(0, 177, 0);
+  }
+}

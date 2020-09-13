@@ -1,0 +1,61 @@
+@mixin widHei($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+$boxShadowColor: 0 0 10px rgb(2, 173, 8);
+$border: 1px solid lightgray;
+$borRadius: 5px;
+$outline: none;
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_input {
+    @include widHei(500px, 40px);
+    outline: $outline;
+    border: $border;
+    border-radius: $borRadius;
+  }
+
+  &_input:focus {
+    transition: 0.3s linear;
+    -webkit-box-shadow: $boxShadowColor;
+    box-shadow: $boxShadowColor;
+  }
+
+  &_button:focus {
+    -webkit-box-shadow: $boxShadowColor;
+    box-shadow: $boxShadowColor;
+  }
+
+  &_clean {
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-image: url(../../../Icons/cleanInputValue.png);
+    outline: none;
+  }
+}
+
+.add_car {
+  margin-right: 20px;
+  @include widHei(90px, 30px);
+  outline: $outline;
+  border: $border;
+  border-radius: $borRadius;
+  margin-left: 20px;
+  background-color: rgb(2, 173, 8);
+  color: white;
+  cursor: pointer;
+}
+
+.add_car:hover {
+  -webkit-box-shadow: $boxShadowColor;
+  box-shadow: $boxShadowColor;
+}

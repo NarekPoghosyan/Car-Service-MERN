@@ -1,0 +1,21 @@
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  h1 {
+    font-size: 34px;
+  }
+
+  &_logo {
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    width: 64px;
+    height: 64px;
+    background-image: url(../../../Icons/titleCar.png);
+    outline: none;
+  }
+
+}
